@@ -56,3 +56,4 @@ while errors<tries:
         input("press Enter!")
 else:
     print("u lose")
+    input("press Enter!")
