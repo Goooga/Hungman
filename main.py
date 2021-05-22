@@ -1,5 +1,7 @@
 import random
 import os
+
+
 def check(letter,word):
     i = 0
     for c in word:
@@ -8,6 +10,7 @@ def check(letter,word):
         else:
             i+=1
     return -1
+
 
 tries = 9 
 errors = 0
@@ -20,12 +23,13 @@ for i in range(len(word)):
 used = []
 
 
-print(word)
-
 while errors<tries:
+    
+    
     os.system('cls')
     print(*guess)
     print(f"U have {tries-errors} tries of {tries} left")
+
 
     letter = input()
     if not letter in used:
@@ -41,9 +45,12 @@ while errors<tries:
                 print("U won the game!!!")
                 break
         
+        
         else:
             errors+=1
             print("Wrong!")
+    
+    
     else:
         print("U already used this letter!")
         input("press Enter!")
